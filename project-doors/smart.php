@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Thank you!</title>
+	<!-- Custom styles for this template -->
+	<link href="css/style.css" rel="stylesheet">
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-5HQLF23');</script>
+	<!-- End Google Tag Manager -->
+
+</head>
+	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HQLF23"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+	<div class="contain">
+		<div class="message">
+			Спасибо, что оставили заявку! <br>
+			В ближайшее время мы <br>
+			с Вами свяжемся
+		</div>
+		<div class="copyright">© 2018 Двери. All rights reserved.</div>
+	</div>
+	</body>
+</html>
+
+<?php 
+
+
+$name = $_POST['name'];
+$number = $_POST['number'];
+$info = $_POST['info'];
+
+require_once('phpmailer/PHPMailerAutoload.php');
+$mail = new PHPMailer;
+$mail->CharSet = 'utf-8';
+
+//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = 'smtp.mail.ru';  // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = 'glass-gun@mail.ru';                 // Наш логин
+$mail->Password = 'blackfriday';                           // Наш пароль от ящика
+$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 465;                                    // TCP port to connect to
+ 
+$mail->setFrom('glass-gun@mail.ru', '');   // От кого письмо 
+$mail->addAddress('veruchka93@gmail.com');     // Add a recipient
+//$mail->addAddress('ellen@example.com');               // Name is optional
+//$mail->addReplyTo('info@example.com', 'Information');
+//$mail->addCC('cc@example.com');
+//$mail->addBCC('bcc@example.com');
+//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+$mail->isHTML(true);                                  // Set email format to HTML
+
+$mail->Subject = 'Новый заказ';
+$mail->Body    = '
+	Пользователь оставил свои данные <br><br> 
+	Имя: '.$name.' <br>
+	Номер телефона: '.$number.' <br>
+	Дверь, стоимость которой хотят узнать(пусто, если это другая форма): '.$info.' <br>'
+	;
+	
+if(strlen($name) < 3) {
+	echo'<meta http-equiv="refresh" content="0; url=index.html">';
+	return false;
+};
+
+if(strlen($number) < 3) {
+	echo'<meta http-equiv="refresh" content="0; url=index.html">';
+	return false;
+};
+
+if(!$mail->send()) {
+    return false;
+} else {
+echo('<meta http-equiv="refresh" content="3; url=index.html">');
+}
+
+?>

@@ -1,0 +1,1415 @@
+// Шрифты
+@import "fonts"
+// Цвета
+@import "colors"
+// Сертификаты
+@import "sert"
+// Страница благодарности
+@import "message"
+// Базовые стили
+html
+	font-size: 10px
+	font-family: 'regular'
+
+body
+	padding: 0
+	margin: 0	
+
+.btn
+	font-size: 2.2rem
+	font-family: 'light'
+	color: $white
+	padding: 1rem 4rem
+	background-image: url(../img/btn.png)
+	background-size: 100% 100%
+	border: none
+	box-shadow: 2px 3px 4px 0px rgba(35, 31, 32, 0.65)
+	text-shadow: 1px 2px 1px rgba(35, 31, 32, 0.4)
+	cursor: pointer
+	&:focus
+		outline: none
+
+.form
+	padding: 2rem 3rem
+	text-align: center
+	background: url(../img/main-adv-form.png) center center no-repeat
+	background-size: 100% 100%
+	height: 26rem
+	&-caption
+		display: inline-block
+		font-family: "light"
+		text-align: center
+		color: rgba(255, 255, 255, 0.9)
+		font-size: 1.7rem
+		padding-bottom: 1rem
+		border-bottom: 1px solid #e9d75f
+		margin-bottom: 2rem
+
+	input
+		width: 34rem
+		height: 3.4rem
+		color: $black
+		font-size: 2rem
+		font-family: 'regular'
+		padding: 1.5rem
+		margin-bottom: 1.4rem
+		border-style: solid
+		border-width: 1px
+		border-color:  #e9d75f
+		box-sizing: border-box
+		background-color:  rgba(255, 255, 255, 0.8)
+		box-shadow: 2px 3px 4px 0px rgba(35, 31, 32, 0.2)
+
+		&::placeholder
+			color: $black
+			text-align: center
+			font-size: 1.8rem
+			font-family: 'regular'
+	textarea
+		width: 37rem
+		height: 13rem
+		font-size: 2rem
+		border: 2px solid #827645
+		margin-bottom: 2.7rem
+		background-color:  rgba(255, 255, 255, 0.8)
+		&::placeholder
+			color: $black
+			text-align: center
+			font-size: 2rem
+			font-family: 'regular'
+	button
+		margin-top: 1rem
+.yellow-line
+	background-color: $yellow
+	height: 1px
+	width: 100%
+	margin-top: 3rem
+.bg-1
+	position: absolute
+	top: 0
+	right: 0
+
+.bg-2
+	position: absolute
+	top: 240rem
+	width: 100%
+	height: 976rem
+.bg 
+	background: #111 url(../img/big-bg-compress.jpg) center bottom no-repeat
+	background-size: auto 915rem
+.arrow 
+	position: absolute
+	z-index: 99
+	top: 50%
+	border: none
+	width: 6rem
+	height: 6rem
+	background-color: #000
+	&:focus
+		outline: none
+.prev 
+	left: 0
+	background: url(../img/left-arrow.png) center no-repeat
+	background-size: 100%
+	z-index: 99
+
+.next 
+	right: 0
+	background: url(../img/right-arrow.png) center no-repeat
+	background-size: 100%
+	z-index: 1000
+#arrow-del
+	display: none
+.clear
+	content: ''
+	clear: both
+// Основные стили
+.main
+	position: relative
+	z-index: 11
+	padding-top: 2rem
+	background: url(../img/main-doors.png) top no-repeat
+	background-size: 130rem 100%
+	padding-bottom: 3rem
+	&-wrap
+		position: relative
+		background-color: #111111
+	&-advantage
+		color:  rgba(255, 255, 255, 0.9)
+		font-size: 1.8rem
+		margin-top: 18rem
+		&-paragraph
+			background:  url(../img/main-advantage-paragraph.png) center no-repeat
+			background-size: 100% 100%
+			padding: 0.5rem
+			padding-bottom: 1rem
+			font-family: 'light'
+			font-size: 1.7rem
+			height: 26rem
+			ul
+				list-style: none
+				text-shadow: 2px 3px 3px rgba(35, 31, 32, 0.3)
+				li
+					position: relative
+					padding-left: 3rem
+					margin-bottom: 2rem
+
+					&::before 
+						position: absolute
+						left: -2rem
+						top: 50%
+						transform: translateY(-50%)
+						display: block
+						content: ''
+						width: 3rem
+						height: 3rem
+						background-image: url(../img/ok.png)
+						background-position: center center
+						background-repeat: no-repeat
+						background-size: 100% 100%
+						margin-right: 2rem
+	&-caption
+		font-family: 'souven'
+		color: $white
+		text-transform: uppercase
+		font-size: 3rem
+		font-weight: 400
+		line-height: 1.842
+		text-align: center
+		text-shadow: 2px 3px 5px rgba(35, 31, 32, 0.8)
+		padding: 1.1rem 3rem
+		&-block
+			margin: auto
+			width: 90%
+			margin-top: 13rem
+			background-image: url(../img/main-caption-block.png)
+			background-size: cover
+	&-number
+		width: 100%
+		display: inline-block
+		font-size: 2.2rem
+		font-family: 'light'
+		text-align: right
+
+.catalog
+	margin: 0
+	padding: 0
+	//background-color: #111111
+	&-btn
+		font-size: 2rem
+		position: relative
+	&-item
+		width: 100%
+		position: relative
+		text-align: center
+		background:  url(../img/door-border.png) center center no-repeat
+		background-size: 100% 100%
+		padding: 3rem 4rem
+		margin-top: 5rem
+		height: 63rem
+		&-img
+			width: 100%
+			height: 90%
+			margin-bottom: 1rem
+	.container
+		position: relative
+		background-color: rgba(255, 255, 255, 0.3)
+		padding-top: 5rem
+		padding-bottom: 2rem
+	
+	&-caption
+		font-family: 'souven'
+		font-weight: 400
+		text-align: center
+		font-size: 4rem
+		color: $white
+		text-transform: uppercase
+		text-shadow: 2px 3px 5px rgba(35, 31, 32, 0.65)
+		&-standartplus
+			color: #e9d761
+			text-align: center
+			font-family: 'uni'
+			font-size: 3.5rem
+			font-weight: 400
+			padding: 0
+			margin: 0
+			margin-top: 3rem
+			&::before
+				content: ''
+				display: inline-block
+				height: 1px
+				width: 2rem
+				background-color: #e9d761
+				transform: translateY(-0.7rem)
+				margin-right: 1rem	
+			&::after
+				content: ''
+				display: inline-block
+				height: 1px
+				width: 2rem
+				background-color: #e9d761
+				transform: translateY(-0.7rem)
+				margin-left: 1rem
+		&-standart
+			color: #e9d761
+			text-align: center
+			font-family: 'uni'
+			font-size: 3.5rem
+			font-weight: 400
+			padding: 0
+			margin: 0
+			&::before
+				content: ''
+				display: inline-block
+				height: 1px
+				width: 2rem
+				background-color: #e9d761
+				transform: translateY(-0.7rem)
+				margin-right: 1rem	
+			&::after
+				content: ''
+				display: inline-block
+				height: 1px
+				width: 2rem
+				background-color: #e9d761
+				transform: translateY(-0.7rem)
+				margin-left: 1rem
+
+.get_catalog
+	margin-top: 4rem
+	//background-color: $black
+	&-height
+		height: 50rem
+	.container
+		
+	&-book
+		position: relative
+		left: -6rem
+		z-index: 10
+		width: 70rem
+	&-form
+		background: url(../img/get_catalog-form.png) center center no-repeat
+		background-size: 100% 100%
+		margin-top: 10rem
+		width: 50rem
+		height: 29rem
+	&-inform
+		position: relative
+		background:  url(../img/get_catalog-inform.png) center no-repeat
+		background-size: 100%
+		color: $white
+		font-size: 2.3rem
+		text-align: center
+		padding: 5rem 10rem
+		font-family: 'light'
+		font-weight: 300
+
+.video
+	position: relative
+	height: auto
+	iframe
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		width: 50%
+		height: 100%
+	&-caption
+		margin: 0 0 4rem 0
+		text-align: center
+		font-family: 'souven'
+		font-size: 4rem
+		color: $black
+
+.advantage
+	position: relative
+	margin-top: 17rem
+	margin-bottom: 21rem
+	position: relative
+	width: 100%
+	height: 100rem
+	&-wrap
+		margin: auto
+		position: relative
+		width: 100%
+	.block
+		position: absolute
+		font-size: 2rem
+		color: $black
+		text-align: right
+		div
+			position: relative
+			top: -25rem
+			left: 24rem
+			height: 10rem
+			width: 30rem
+	.block-l
+		position: absolute
+		font-size: 2rem
+		font-family: 'light'
+		color: $white
+		text-align: left
+		div
+			position: relative
+			top: -11rem	
+			left: -28rem
+			height: 10rem
+			width: 40rem
+	.block-1
+		top: 5rem
+		right: 45rem
+	.block-2
+		top: 20rem
+		right: 30rem
+	.block-3
+		top: 35rem
+		right: 15rem
+	.block-4
+		top: 50rem
+		right: 0rem
+
+	.block-5
+		top: 22rem
+		left: 23rem
+		div
+			position: relative
+			top: -27rem	
+			left: -20rem
+			height: 10rem
+			width: 30rem
+	.block-6
+		top: 37rem
+		left: 38rem
+	.block-7
+		top: 52rem
+		left: 53rem
+		div
+			top: -9rem
+			left: -32rem
+	.block-8
+		top: 67rem
+		left: 69rem
+		div
+			top: -9rem
+			left: -32rem
+	&-caption
+		position: relative
+		right: -3rem
+		color: $black
+		font-family: 'souven'
+		font-weight: 400
+		font-size: 4rem
+		text-align: center
+
+.work
+	position: relative
+	margin-top: 16rem
+	text-align: center
+	.btn
+		margin-top: 4rem
+	&-caption
+		font-family: 'souven'
+		font-size: 4rem
+		text-transform: uppercase
+		color: $white
+		text-align: center
+		text-shadow: 2px 3px 5px rgba(35, 31, 32, 0.65)
+	// .fotorama-wrap
+	// 	width: 100%
+	.fotorama
+		width: 100%
+	.fotorama-wrap
+		width: 70%
+		position: relative
+		left: 50%
+		transform: translateX(-50%)
+
+.call
+	position: relative
+	margin-top: 10rem
+	&-worker
+		width: 90%
+	.form
+		margin-top: 10rem
+		width: 54rem
+		height: 28.5rem
+	&-text
+		text-align: center
+		font-size: 2.4rem
+		font-family: 'light'
+		font-weight: 300
+		color: $white
+		background:  url(../img/call-text.png) center no-repeat
+		background-size: 100% 100%
+		padding: 3rem 
+		b
+			font-family: 'bold'
+			font-size: 2.8rem
+
+.about
+	margin-top: 30rem
+	margin-bottom: 33rem
+	position: relative
+	top: -25rem
+	&-block
+		margin-bottom: 9rem
+		width: 25rem
+		height: 25rem
+	&-text
+		display: inline-block
+		text-align: center
+		font-size: 2.8rem
+		font-family: 'uni'
+		font-weight: 400
+		width: 100%
+	&-img
+		display: inline-block
+		width: 100%
+	&-caption
+		text-align: left
+		text-transform: uppercase
+		font-family: 'souven'
+		font-weight: 400
+		font-size: 4rem
+
+		span
+			margin-left: 24rem
+
+.thanks
+	position: relative
+	top: -13rem
+	margin-top: 0rem
+	&-slider
+		width: 80%
+		margin: auto
+		margin-top: 9rem
+	&-caption
+		color: $white
+		font-size: 4rem
+		font-weight: 400
+		font-family: 'souven'
+		text-transform: uppercase
+		text-align: center
+	&-block
+		text-align: center
+		&:focus
+			outline: none
+	&-name
+		display: inline-block
+		font-size: 3rem
+		font-family: 'uni'
+		color: $black
+		font-weight: 700
+		width: 100%
+		text-align: left
+		margin-left: 15%
+		small
+			font-size: 1.4rem
+			ml
+	&-rew
+		text-align: left
+		display: inline-block
+		font-size: 2rem
+		font-family: 'light'
+		color: $black
+		font-weight: 300
+		background:  url(../img/rew-block.png)center no-repeat
+		background-size: 100% 100%
+		padding: 2rem
+		height: 24rem
+		width: 70%
+
+.step
+	margin-top: 14rem
+	position: relative
+	&-arrow
+		position: absolute
+		top: 50%
+		left: 40%
+		width: 6rem
+		&-row2
+			left: 40%
+	&-block
+		margin: auto
+		width: 19rem
+		height: 35rem
+		&-arrow
+			width: 100%
+			height: 13rem
+			position: relative
+		&-text
+			color: $white
+			font-size: 1.7rem
+			font-family: 'uni'
+			text-align: center
+			font-weight: 400
+		&-img
+			width: 18rem
+	&-caption
+		text-align: center
+		font-size: 4rem
+		color: $white
+		font-family: 'souven'
+		font-weight: 400
+		text-transform: uppercase
+		text-shadow: 2px 3px 5px rgba(35, 31, 32, 0.65)
+		margin-bottom: 11rem
+
+.sertificate
+	display: none
+	position: relative
+	margin-top: 10rem
+	.container
+		padding: 0
+	&-block
+		position: relative
+		width: 100%
+		height: 58rem
+		background-color: rgba(255, 255, 255, 0.2)
+		padding: 5rem 2rem	
+	&-img
+		display: inline-block
+		padding: 7px
+		border: 4px solid #c0c0c0
+		width: 90%
+		position: absolute
+		left: 50%	
+		transform: translateX(-50%)
+	&-caption
+		text-transform: uppercase
+		text-align: center
+		color: $white
+		font-family: 'souven'
+		font-weight: 400
+		font-size: 4rem
+		margin-bottom: 4rem
+
+.contact
+	position: relative
+	&-numbers
+		margin-bottom: 4rem
+	&-adress
+		margin-top: 5rem
+	&-caption
+		font-family: 'souven'
+		font-size: 4rem
+		color: $white
+		text-transform: uppercase
+		text-align: center
+		margin-top: 12rem
+	&-block
+		background:  url(../img/contact-block.png) center no-repeat
+		background-size: 100% 100%
+		padding: 4rem 9rem
+		font-size: 2.4rem
+
+.question
+	position: relative
+	&-caption
+		margin-top: 6rem
+		margin-bottom: 4rem
+		font-size: 4rem
+		text-align: center
+	
+	&-form
+
+		padding: 7rem 10rem
+		background: url(../img/question-form.png) center center no-repeat
+		height: auto
+		input
+			border: 2px solid #827645
+			font-size: 2rem
+			width: 37rem
+			height: 4rem
+			margin-bottom: 1.6rem
+	
+.footer
+	.copyright
+		position: relative
+		margin-bottom: 1rem
+		text-align: center
+		font-size: 2rem
+		font-family: 'light'
+
+	.create
+		color: $white
+		position: relative
+		margin-bottom: 1rem
+		text-align: center
+		font-size: 2rem
+		font-family: 'light'
+		a
+			text-decoration: none
+			color: $white
+			&:hover
+				color: darken($white, 5%)
+// Стили форм
+.form-call
+	display: none
+	position: fixed
+	top: 0
+	width: 100vw
+	height: 100vh
+	z-index: 998
+	background-color: rgba(0,0,0, 0.9)
+	&-img
+		position: absolute
+		right: 5%
+		top: 5%
+	.form
+		padding-top: 5rem
+		height: auto
+		max-width: 50rem
+		position: fixed
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		z-index: 999
+	.btn
+
+.form-want
+	display: none
+	position: fixed
+	top: 0
+	width: 100vw
+	height: 100vh
+	z-index: 998
+	background-color: rgba(0,0,0, 0.9)
+	&-img
+		position: absolute
+		right: 5%
+		top: 5%
+	.form
+		padding-top: 5rem
+		height: auto
+		max-width: 50rem
+		position: fixed
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		z-index: 999
+	.btn
+
+.form-cost
+	display: none
+	position: fixed
+	top: 0
+	width: 100vw
+	height: 100vh
+	z-index: 998
+	background-color: rgba(0,0,0, 0.9)
+	&-img
+		position: absolute
+		right: 5%
+		top: 5%
+	.form
+		padding-top: 5rem
+		height: auto
+		max-width: 50rem
+		position: fixed
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		z-index: 999
+	.btn
+
+
+// Медиа-запросы
+@media (max-width: 1600px)
+	.advantage
+		margin-bottom: 23rem
+		&-wrap
+			width: 80%
+		.block
+			position: absolute
+			font-size: 2rem
+			color: $black
+			text-align: right
+			img
+				width: 20rem
+			div
+				font-size: 1.8rem
+				position: relative
+				top: -24rem
+				left: 27rem
+				height: 10rem
+				width: 30rem
+		.block-l
+			position: absolute
+			font-size: 2rem
+			font-family: 'light'
+			color: $white
+			text-align: left
+			img
+				width: 20rem
+			div
+				position: relative
+				top: -11rem	
+				left: -28rem
+				height: 10rem
+				width: 40rem
+		.block-1
+			top: 5rem
+			right: 45rem
+			div
+				font-size: 1.8rem
+				position: relative
+				top: -24rem
+				left: 20rem
+				height: 10rem
+				width: 30rem
+		.block-2
+			top: 17rem
+			right: 33rem
+		.block-3
+			top: 29rem
+			right: 21rem
+			div
+				top: -22rem
+				left: 22rem
+		.block-4
+			top: 41rem
+			right: 9rem
+			div
+				top: -20rem
+				left: 19rem
+				width: 23rem
+		.block-5
+			top: 17rem
+			left: 12rem
+			div
+				position: relative
+				top: -24rem	
+				left: -20rem
+				height: 10rem
+				width: 30rem
+		.block-6
+			top: 29rem
+			left: 24rem
+			div
+				top: -10rem
+				left: -29rem
+		.block-7
+			top: 41rem
+			left: 36rem
+			div
+				top: -6rem
+				left: -30rem
+		.block-8
+			top: 53rem
+			left: 48rem
+			div
+				top: -9rem
+				left: -32rem
+	.work
+		position: relative
+		top: -15rem
+	.bg
+		background-size: auto 917rem
+@media (max-width: 1200px) 
+	html 
+		font-size: 9px
+	.bg
+		background-size: auto 893rem
+	.main-caption-block 
+		margin-top: 3rem
+	
+	.main-advantage 
+		margin-top: 3rem
+	
+	.main-advantage-paragraph 
+		height: 29rem
+	
+	.main-advantage-form 
+		height: 29rem
+	
+	.main 
+		&-number 
+			margin-bottom: 1rem
+		
+	
+	.bg-1 
+		width: 50%
+	
+	.video
+		height: auto
+	.overlay_container img
+		position: absolute
+		top: 0
+		left: 0
+		width: 40vw
+		padding: 10px
+		-webkit-border-radius: 5px
+		-moz-border-radius: 5px
+	.work
+		position: relative
+		top: -15rem
+	.call
+		position: relative
+		top: -9rem
+	.advantage
+		&-caption
+			margin-left: 2rem
+		&-wrap
+			width: 75%
+		.block
+			position: absolute
+			font-size: 2rem
+			color: $black
+			text-align: right
+			img
+				width: 20rem
+			div
+				font-size: 1.8rem
+				position: relative
+				top: -24rem
+				left: 27rem
+				height: 10rem
+				width: 30rem
+		.block-l
+			position: absolute
+			font-size: 2rem
+			font-family: 'light'
+			color: $white
+			text-align: left
+			img
+				width: 20rem
+			div
+				position: relative
+				top: -11rem	
+				left: -28rem
+				height: 10rem
+				width: 40rem
+		.block-1
+			top: 3rem
+			right: 35rem
+			div
+				font-size: 1.8rem
+				position: relative
+				top: -24rem
+				left: 20rem
+				height: 10rem
+				width: 30rem
+		.block-2
+			top: 15rem
+			right: 23rem
+		.block-3
+			top: 27rem
+			right: 11rem
+			div
+				top: -22rem
+				left: 22rem
+		.block-4
+			top: 39rem
+			right: -1rem
+			div
+				top: -26rem
+				left: 12rem
+				width: 23rem
+		.block-5
+			top: 17rem
+			left: 12rem
+			div
+				position: relative
+				top: -24rem	
+				left: -20rem
+				height: 10rem
+				width: 30rem
+		.block-6
+			top: 29rem
+			left: 24rem
+			div
+				top: -10rem
+				left: -29rem
+		.block-7
+			top: 41rem
+			left: 36rem
+			div
+				top: -6rem
+				left: -30rem
+		.block-8
+			top: 53rem
+			left: 48rem
+			div
+				top: -9rem
+				left: -32rem
+	.about
+		top: -40rem
+		left: 2rem
+		margin-bottom: 0
+		&-block
+			height: 26rem
+			margin-bottom: 10rem
+@media (max-width: 992px) 
+	.work
+		top: 0
+	.call
+		top: 0
+	.main-advantage-paragraph 
+		font-size: 1.6rem
+		margin-left: 0rem
+		height: 31rem
+	.main-advantage-form 
+		font-size: 1.6rem
+		height: 31rem
+		input
+			width: 100%
+	
+	.catalog
+		.btn
+			padding: 0.6rem 1rem
+			width: 100%
+			font-size: 1.6rem
+			line-height: 1.8rem
+			margin-top: 2rem
+		&-item
+			height: 40rem
+			&-img
+				margin-bottom: -1rem
+	
+	.get_catalog-book
+		width: 48rem
+	.get_catalog-form
+		width: 100%
+	.video
+		height: 36rem
+		iframe
+			width: 70%
+	.call-worker
+		width: 70%
+		position: relative
+		left: 35%
+		top: 15%
+	.call
+		margin-bottom: 30rem
+	.about
+		top: -20rem
+		&-text
+			font-size: 2.3rem
+		&-block
+			width: 17rem
+			height: 22rem
+	.thanks
+		&-caption
+			background-color: rgba(0,0,0, 0.7)
+			border-radius: 10px
+		&-block
+			width: 100%
+		&-rew
+			width: 90%
+			height: 25rem
+	.next
+		right: -3rem
+	.prev
+		left: -3.5rem
+	.step
+		&-block
+		&-arrow
+			left: -8%
+			&-row2
+				left: -8%
+	.sertificate-block
+		height: 40rem
+	.advantage
+		&-caption
+		color: $black
+		margin-bottom: 5rem
+		&-wrap
+			width: 75%
+			margin: auto
+		.block
+			position: absolute
+			font-size: 2rem
+			color: $black
+			text-align: right
+			img
+				width: 10rem
+			div
+				color: $white
+				text-align: center
+				font-size: 1.8rem
+				position: relative
+				top: 0
+				left: 35%
+				height: 10rem
+				width: 30rem
+		.block-l
+			position: absolute
+			font-size: 1.8rem
+			font-family: 'light'
+			color: $white
+			text-align: left
+			img
+
+				width: 10rem
+			div
+				font-size: 1.8rem
+				text-align: center
+				position: relative
+				top: 0	
+				left: -35%
+				height: 10rem
+				width: 40rem
+		.block-1
+			top: 3rem
+			right: 0rem
+		.block-2
+			top: 29rem
+			right: 0rem
+		.block-3
+			top: 52rem
+			right: 0rem
+		.block-4
+			top: 73rem
+			right: 0rem
+		.block-5
+			top: 3rem
+			left: 0rem
+		.block-6
+			top: 29rem
+			left: 0rem
+		.block-7
+			top: 52rem
+			left: 0rem
+		.block-8
+			top: 73rem
+			left: 0rem
+@media (max-width: 767px) 
+	.main-caption-block
+		width: 100%
+	.main-advantage
+		position: relative
+		font-size: 2rem
+		color: #fff
+
+	.main-advantage-paragraph 
+		font-size: 1.6rem
+		margin-left: 0rem
+		height: 26rem
+		width: 90%
+		margin: auto
+		background-color: rgba(0,0,0, 0.4)
+	.main-advantage-form 
+		font-size: 1.6rem
+		height: 26rem
+		width: 90%
+		margin: auto
+		margin-top: 1rem
+		background-color: rgba(0,0,0, 0.4)
+	
+	.catalog
+		&-item
+			padding: 2rem
+			height: 30rem
+			&-img
+				margin-bottom: -1.5rem
+		.btn
+			padding: 0.6rem 0.6rem
+			font-size: 1.4rem
+	.get_catalog
+		.form
+			padding: 2rem
+	.get_catalog-inform
+		background-size: 100% 100%
+		padding: 2rem
+		margin-bottom: 0
+	.get_catalog-book
+		display: none
+	.get_catalog-form
+		width: 80%
+		margin: auto
+		margin-top: 0
+		padding: 1rem
+	.get_catalog-height
+		height: 35rem
+	.video
+		&-caption
+			color: $white
+		height: 36rem
+		iframe
+			width: 80%
+	.call-worker
+		display: none
+	.call
+		.form
+			width: 100%
+			margin: 5rem auto 0
+	.about
+		text-align: center
+		padding-top: 2rem
+		padding-bottom: 10rem
+		background-color: rgba(255,255,255, 0.7)
+		border-radius: 30px
+		margin-left: 2rem
+		margin-right: 2rem
+		height: auto
+		&-img
+			width: 100%
+		&-text
+			font-size: 3rem
+			width: 100%
+		&-caption
+			text-align: center
+			span
+				margin: auto
+		&-block
+			text-align: center
+			height: auto
+
+
+	.thanks
+		&-caption
+			color: $white
+		&-img
+			width: 24%
+			margin-top: 20%
+		&-rew
+			font-size: 1.8rem
+			width: 90%
+			height: 27rem
+		&-name
+			color: $white
+			margin-left: 5%
+	.next
+		right: -5rem
+	.prev
+		left: -5rem
+	#arrow-del
+		display: inline-block
+	.step
+		background-color: rgba(0,0,0, 0.5)
+		border-radius: 30px
+		margin-left: 2rem
+		margin-right: 2rem
+		&-block
+			margin-top: 0
+			text-align: center
+			width: 100%
+			height: 32rem
+			&-arrow
+				height: 12rem
+				width: 100%
+				text-align: center
+			&-text
+				font-size: 2.4rem
+		&-arrow
+			left: 45%
+			transform: rotate(90deg) translateX(-50%)
+			&-row2
+				left: 45%
+				transform: rotate(90deg) translateX(-50%)
+	.sertificate
+		&-caption
+			background-color: rgba(0,0,0, 0.9)
+			border-radius: 10px
+	.sertificate-block
+		width: 100%
+		height: 180rem	
+	.blokimg
+		height: 60rem
+		img
+			width: 100%
+
+	.overlay_container img
+		position: absolute
+		top: 10rem
+		left: 0
+		width: 70vw
+		padding: 10px
+		-webkit-border-radius: 5px
+		-moz-border-radius: 5px
+	.p-null
+		padding: 0
+
+	.advantage
+		&-caption
+			color: $white
+	.bg
+		background-size: auto 800rem
+	.question-caption
+		color: $white
+@media (max-width: 576px) 
+	.bg-1
+		display: none
+	.thanks
+		margin-top: 0
+		height: 40rem
+	.main-number
+		text-align: center
+		font-size: 2.6rem
+	.main 
+		background-size: auto 70%
+		text-align: center
+		.form
+			height: auto
+		.btn
+			font-size: 1.7rem
+	.main-advantage-paragraph
+		text-align: left
+		height: 100%
+	
+	.catalog
+		&-item
+			height: 47rem
+			padding: 3rem 5rem
+			padding-bottom: 4rem
+			&-img
+				margin-bottom: -1.2rem
+		.btn
+			padding: 2rem
+			font-size: 2rem
+	.get_catalog
+		.form
+			height: 95%
+			input
+				width: 100%
+	.prev 
+		left: -6rem
+	.next 
+		right: -6rem
+	.step-caption
+		margin-bottom: 4rem
+	.overlay_container img
+		display: none
+	.form
+		padding: 4rem 6rem
+		height: 40rem
+		input
+			width: 100%
+		textarea
+			width: 100%
+	.advantage
+		margin-bottom: 0
+		height: auto
+		&-wrap
+			margin-bottom: 0
+			height: auto
+			display: inline-block
+			width: 100%
+			text-align: center
+		&-caption
+			color: $white
+			margin-bottom: 5rem
+			width: 100%
+			right: 0
+		.block
+			display: inline-block
+			text-align: center
+			position: relative
+			width: 100%
+			margin-bottom: 2rem
+			top: 0
+			div
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+				position: relative
+				text-align: center
+		.block-l
+			display: inline-block
+			text-align: center
+			position: relative
+			width: 100%
+			margin-bottom: 2rem
+			top: 0
+			div
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+				position: relative
+				text-align: center
+			
+		.block-5
+			margin-bottom: 7rem
+	.work
+		margin-top: 0
+	.form
+		width: 100%
+		padding: 4rem
+@media (max-width: 490px) 
+	.prev 
+		left: -3rem
+	.next 
+		right: -3rem
+	.catalog
+		&-item
+			padding: 1.8rem
+			height: 44rem
+			&-img
+				height: 80%
+				width: 80%
+		.btn
+			padding: 2rem 0
+			font-size: 1.8rem
+	.video
+		height: 30rem
+		iframe
+			width: 90%
+	.work
+		margin-top: 3rem
+	.call
+		.form
+			input
+				width: 100%
+
+	.thanks
+		text-align: center
+		&-block
+			position: relative
+		&-img
+			margin: auto
+			float: none	
+			padding: 0
+		&-rew
+			font-size: 1.6rem
+			float: none
+			height: 28rem
+		&-name
+			float: none
+			margin: 0
+			margin-bottom: 1rem
+	.next
+		right: -4rem
+	.prev
+		left: -4rem
+
+	.sertificate-block
+		width: 100%
+		height: 155rem	
+	.blokimg
+		height: 50rem
+		img
+			width: 100%
+@media (max-width: 400px) 
+	.catalog
+		&-item
+			padding: 1.6rem
+			height: 39rem
+		.btn
+			padding: 1.4rem 0
+			font-size: 1.8rem
+
+	.call
+		.form
+			.btn
+				padding: 1rem
+	.video
+		margin-top: 5rem
+	.step
+		&-caption
+			font-size: 3rem
+		margin-top: 20rem
+	.advantage-caption
+		width: 90%
+		font-size: 3rem
+	.thanks
+		&-name
+			font-size: 2rem
+			small
+
+		&-rew
+			width: 95%
+			padding: 1rem
+			height: 29rem
+		&-caption
+			font-size: 3rem
+
